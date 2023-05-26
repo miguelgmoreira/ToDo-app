@@ -14,9 +14,9 @@ function Filter({ filter, setFilter, setSort }) {
                     </select>
                 </div>
                 <div>
-                    <p>Ordem alfabética:</p>
-                    <button onClick={() => setSort('Asc')}>Asc</button>
-                    <button onClick={() => setSort('Desc')}>Desc</button>
+                    <p>Ordenar por horário:</p>
+                    <button onClick={() => setSort('Cresc')}>Cresc</button>
+                    <button onClick={() => setSort('Dec')}>Dec</button>
                 </div>
             </div>
         </div>

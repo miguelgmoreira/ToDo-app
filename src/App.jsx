@@ -5,7 +5,6 @@ import Todo from './components/Todo'
 import TodoForm from './components/TodoForm'
 import Search from './components/Search'
 import Filter from './components/Filter'
-import { CheckFat } from '@phosphor-icons/react'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -13,9 +12,9 @@ function App() {
   const [search, setSearch] = useState('')
 
   const [filter, setFilter] = useState('All')
-  const [sort, setSort] = useState('Asc')
+  const [sort, setSort] = useState('Cresc')
 
-  const addTodo = (text, category) => {
+  const addTodo = (text, category, time) => {
 
     const newTodos = [
       ...todos,
@@ -23,6 +22,7 @@ function App() {
         id: Math.floor(Math.random() * 10000),
         text,
         category,
+        time,
         isCompleted: false,
       },
     ]
@@ -48,12 +48,12 @@ function App() {
 
     <div className='app'>
       <div className="header"></div>
-      <h1>Lista de tarefas <CheckFat size={30} weight="fill" color='#70e000'/></h1>
+      <h1>Lista de tarefas </h1>
       <TodoForm addTodo={addTodo} />
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
       <div className="todo-list">
-        {todos
+        {[...todos]
           .filter(todo =>
             filter === 'All'
               ? true
@@ -65,9 +65,9 @@ function App() {
             todo.text.toLowerCase().includes(search.toLowerCase())
           )
           .sort((a, b) =>
-            sort === 'Asc'
-              ? a.text.localeCompare(b.text)
-              : b.text.localeCompare(a.text))
+            sort === 'Cresc'
+              ? a.time.localeCompare(b.time, undefined, {numeric: true})
+              : b.time.localeCompare(a.time,undefined,  {numeric: true}))
           .map(todo => (
             <Todo todo={todo}
               key={todo.id}
