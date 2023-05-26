@@ -5,6 +5,7 @@ import Todo from './components/Todo'
 import TodoForm from './components/TodoForm'
 import Search from './components/Search'
 import Filter from './components/Filter'
+import { CheckFat } from '@phosphor-icons/react'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -47,7 +48,7 @@ function App() {
 
     <div className='app'>
       <div className="header"></div>
-      <h1>Lista de tarefas</h1>
+      <h1>Lista de tarefas <CheckFat size={30} weight="fill" color='#70e000'/></h1>
       <TodoForm addTodo={addTodo} />
       <Search search={search} setSearch={setSearch} />
       <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
