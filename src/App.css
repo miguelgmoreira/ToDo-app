@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  font-family: 'Poppins';
+}
+
+
+body {
+  background-color: #121214;
+  padding: 30px;
+  color: #eee;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto 300px;
+  background-color: #222;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #2ec4b6;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #2ec4b6;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 1;
+  transition: .3s;
+  font-size: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+  outline: 2px solid #000;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #555;
+}
+
+.todo {
+  box-shadow: 0 0 10px #121214;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-form {
+ padding-bottom: 1.5rem; 
+}
+
+input, select {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: none;
+  color: #eee;
+  border-radius: 3px;
+  width: 100%;
+  outline: none;
+}
+
+input {
+  background-color: #000;
+}
+
+select {
+  background-color: #121214;
+}
+
+input:hover, select:hover {
+  outline: 2px solid #000;
+}
+
+.remove {
+  background-color: #dc2f02;
+}
+
+.category {
+  color: #888;
+}
+
+.filter, .search {
+  border-bottom: 2px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.filter-options div {
+  flex: 1 1 0;
+}
+
+.filter select {
+  padding: 10px;
+}
+
+
+
