@@ -75,13 +75,14 @@ button:hover {
 }
 
 input, select {
-  padding: 15px;
+  padding: 12px;
   margin-bottom: 10px;
   border: none;
   color: #eee;
   border-radius: 3px;
   width: 100%;
   outline: none;
+  font-size: 1.2rem;
 }
 
 input {
